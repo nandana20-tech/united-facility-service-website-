@@ -1,0 +1,544 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* COLORS */
+:root {
+  --blue: #1f3a5f;
+  --maroon: #7b1e2b;
+  --light-bg: #f5f7fa;
+}
+
+/* BODY */
+body {
+  background: var(--light-bg);
+  color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  gap: 50px;
+  background: linear-gradient(120deg, var(--blue), var(--maroon));
+  color: white;
+}
+
+/* HERO TEXT */
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content .tagline {
+  font-size: 18px;
+  max-width: 520px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: var(--maroon);
+  color: white;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.hero-image {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+.hero {
+  align-items: stretch;   /* NOT center */
+}
+
+
+/* THIS creates the ManpowerGroup curved shape */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  gap: 50px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+/* =========================
+   SERVICES SECTION
+   ========================= */
+.services-section {
+  min-height: 100vh;
+  padding: 80px 60px;
+  background: #f7f8fb;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 36px;
+  color: var(--maroon);
+  margin-bottom: 12px;
+}
+
+.services-intro {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card */
+.service-card {
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.service-card h3 {
+  font-size: 22px;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 15.5px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.service-card ul {
+  padding-left: 18px;
+}
+
+.service-card ul li {
+  font-size: 14.5px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  .services-section {
+    padding: 60px 20px;
+  }
+
+  .services-section h2 {
+    font-size: 30px;
+  }
+
+  .services-intro {
+    font-size: 15.5px;
+  }
+}
+
+.services-section {
+  background: #f7f8fb; /* soft blue-gray */
+}
+/* =========================
+   CONTACT SECTION
+   ========================= */
+.contact-section {
+  min-height: 100vh;
+  padding: 80px 60px;
+  background: linear-gradient(120deg, var(--blue), var(--maroon));
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.contact-intro {
+  font-size: 17px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.contact-card {
+  background: white;
+  color: #222;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item strong {
+  color: var(--maroon);
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-card {
+    padding: 28px 22px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+/* =========================
+   ABOUT ME SECTION
+   ========================= */
+.about-me {
+  min-height: 100vh;
+  padding: 80px 60px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 36px;
+  color: var(--maroon);
+  margin-bottom: 30px;
+}
+
+.about-text {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 22px;
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  .about-me {
+    padding: 60px 20px;
+  }
+
+  .about-container h2 {
+    font-size: 30px;
+  }
+
+  .about-text {
+    font-size: 15.5px;
+  }
+}
+/* =========================
+   ABOUT US – WORKFORCE
+   ========================= */
+.about-section {
+  min-height: 100vh;
+  padding: 90px 60px;
+  background: #f7f8fb;
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 38px;
+  color: var(--maroon);
+  margin-bottom: 18px;
+}
+
+.about-lead {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* GRID */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+/* BOX */
+.about-box {
+  background: #ffffff;
+  padding: 36px 30px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about-box h3 {
+  font-size: 22px;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+.about-box p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* MOBILE */
+@media (max-width: 740px) {
+  .about-section {
+    padding: 70px 20px;
+  }
+
+  .about-container h2 {
+    font-size: 30px;
+  }
+
+  .about-lead {
+    font-size: 15.5px;
+    margin-bottom: 40px;
+  }
+}
+/* ================================
+   SERVICES HERO SECTION
+================================ */
+
+.services-hero {
+  min-height: 100vh;
+  background: linear-gradient(120deg, var(--blue), var(--maroon));
+  color: white;
+
+  display: flex;
+  align-items: center;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+/* Heading */
+.services-container h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+/* Intro text */
+.services-intro {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9); /* THIS fixes visibility */
+}
+
+
+/* Cards layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Individual card */
+.service-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  padding: 35px 30px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card h3 {
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.service-card ul {
+  padding-left: 18px;
+}
+
+.service-card li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.hero,
+.services-hero,
+.about-section,
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.services-container,
+.about-container,
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 40px;
+}
+/* ===== SERVICES SECTION COLOR FIX (MATCH CONTACT) ===== */
+
+#services {
+  min-height: 100vh;
+  background: #f7f9fc;   /* same light theme as Contact section */
+  color: #222;
+  padding: 80px 60px;
+}
+
+/* Heading */
+#services h2 {
+  color: var(--maroon);
+}
+
+/* Sub text */
+#services p {
+  color: #444;
+}
+
+/* Ensure cards look clean on light background */
+#services .service-card {
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+/* ===== CONTACT BOX WIDTH FIX ===== */
+
+#contact .contact-card {
+  max-width: 600px;   /* reduce width (try 850–950 if needed) */
+  margin: 0 auto;     /* keep it centered */
+  padding: 40px 50px; /* slightly tighter padding */
+}
