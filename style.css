@@ -542,3 +542,82 @@ nav a {
   margin: 0 auto;     /* keep it centered */
   padding: 40px 50px; /* slightly tighter padding */
 }
+/* =========================
+   MOBILE FIX (PHONE VIEW)
+   ========================= */
+@media (max-width: 740px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    min-height: auto;              /* REMOVE 100vh issue */
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content .tagline {
+    font-size: 15.5px;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;        /* stack buttons */
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  /* HERO IMAGE */
+  .hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;                  /* CRITICAL FIX */
+    object-fit: contain;           /* STOP cropping */
+    border-radius: 14px;
+  }
+
+  /* SERVICES / ABOUT / CONTACT */
+  .services-container,
+  .about-container,
+  .contact-container {
+    padding: 50px 20px;
+  }
+
+  .services-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT CARD */
+  .contact-card {
+    padding: 25px 20px;
+  }
+
+}
