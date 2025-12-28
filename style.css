@@ -1451,30 +1451,32 @@ nav a:hover::after {
     width: auto !important;
   }
 }
-/* ===== FINAL MOBILE LOGO FIX ===== */
+/* ==================================
+   HERO IMAGE – MOBILE FIX
+   ================================== */
 @media (max-width: 768px) {
 
-  /* Logo container */
-  .logo {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: auto !important;
+  /* Stack hero content vertically */
+  .hero {
+    flex-direction: column !important;
+    text-align: center;
   }
 
-  /* Logo image */
-  .logo img {
-    height: 36px !important;   /* CHANGE SIZE HERE */
-    width: auto !important;
+  /* Image container */
+  .hero-image {
+    width: 100% !important;
     max-width: 100% !important;
-    object-fit: contain !important;
+    margin-top: 30px !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 
-  /* If logo is text */
-  .logo {
-    font-size: 18px !important;
-    line-height: 1 !important;
-    white-space: nowrap !important;
+  /* Image itself */
+  .hero-image img {
+    width: 80% !important;        /* controls size */
+    max-width: 260px !important; /* prevents oversized image */
+    height: auto !important;
+    border-radius: 16px;
   }
 }
 
