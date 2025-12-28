@@ -1451,4 +1451,30 @@ nav a:hover::after {
     width: auto !important;
   }
 }
+/* ===== FINAL MOBILE LOGO FIX ===== */
+@media (max-width: 768px) {
+
+  /* Logo container */
+  .logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+  }
+
+  /* Logo image */
+  .logo img {
+    height: 36px !important;   /* CHANGE SIZE HERE */
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* If logo is text */
+  .logo {
+    font-size: 18px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+}
 
