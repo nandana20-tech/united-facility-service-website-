@@ -621,3 +621,271 @@ nav a {
   }
 
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+body {
+  padding-top: 80px;
+}
+/* =========================
+   EXPERIENCE SECTION
+   ========================= */
+.Experience-section {
+  min-height: 100vh;
+  padding: 80px 60px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.Experience-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Experience-container h2 {
+  font-size: 36px;
+  color: var(--maroon);
+  margin-bottom: 40px;
+}
+
+.Experience-card {
+  background: #f7f8fb;
+  padding: 35px 30px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.Experience-card h3 {
+  font-size: 22px;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.company {
+  font-weight: 600;
+  color: #444;
+}
+
+.duration {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 14px;
+}
+
+.desc {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #333;
+}
+/* =========================
+   EXPERIENCE SECTION (FULL WIDTH)
+   ========================= */
+
+.experience-section {
+  min-height: 100vh;
+  padding: 80px 60px;
+  background: #ffffff;
+}
+
+.experience-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.experience-container h2 {
+  font-size: 36px;
+  color: var(--maroon);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* STACKED LIST (NOT CARDS) */
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ROW STYLE */
+.experience-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #f7f8fb;
+  padding: 26px 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* LOGO */
+.exp-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* TEXT BLOCK */
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.exp-header div {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-card h3 {
+  font-size: 20px;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.role {
+  font-size: 14.5px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* MOBILE */
+@media (max-width: 740px) {
+  .experience-section {
+    padding: 60px 20px;
+  }
+
+  .experience-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .exp-logo {
+    width: 56px;
+    height: 56px;
+  }
+}
+/* =========================
+   ABOUT SECTION – HERO THEME
+   ========================= */
+
+.about-section {
+  min-height: 100vh;
+  padding: 90px 60px;
+  background: linear-gradient(120deg, var(--blue), var(--maroon));
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+/* Container */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading */
+.about-container h2 {
+  font-size: 38px;
+  color: white;
+  margin-bottom: 18px;
+}
+
+/* Intro text */
+.about-lead {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+/* Cards (keep white for contrast) */
+.about-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 36px 30px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Card headings */
+.about-box h3 {
+  font-size: 22px;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+/* Card text */
+.about-box p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  .about-section {
+    padding: 70px 20px;
+  }
+
+  .about-container h2 {
+    font-size: 30px;
+  }
+
+  .about-lead {
+    font-size: 15.5px;
+    margin-bottom: 40px;
+  }
+}
+/* =========================
+   NAVBAR ACTIVE LINK
+   ========================= */
+
+nav a {
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+/* Active link color */
+nav a.active {
+  color: var(--maroon);
+  font-weight: 600;
+}
+
+/* Underline animation */
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--maroon);
+  border-radius: 2px;
+}

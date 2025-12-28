@@ -25,13 +25,15 @@
 
 
 
-    <span>Unity Facility Service</span>
+    <span>United Facility Service</span>
   </div>
 
   <nav>
     <a href="#services">Services</a>
     <a href="#about">About</a>
+    <a href="#Experience">Experience</a>
     <a href="#contact">Contact</a>
+    
   </nav>
 </header>
 
@@ -40,7 +42,7 @@
   <div class="hero-content">
     <h1>Your Partner in Manpower & Facility Services</h1>
     <p class="tagline">
-      At unitedfacilityservice, we believe meaningful, sustainable employment has the power to change the world. Because when you combine talented people with innovative companies, you can build a brighter future for everyone
+      At united facility service, we believe meaningful, sustainable employment has the power to change the world. Because when you combine talented people with innovative companies, you can build a brighter future for everyone
 
     <div class="hero-buttons">
       <a href="#services" class="btn primary">Our Services</a>
@@ -49,13 +51,12 @@
   </div>
 
   <div class="hero-image">
-    <img src="images/women-image.jpeg" alt="Manpower and Facility Services">
+    <img src="images/unitedfacility-logo.jpeg" alt="Manpower and Facility Services">
 
   </div>
 </section>
 
-</body>
-</html>
+<!-- SERVICE SECTION -->
 <section id="services" class="services-hero">
 
   <div class="services-container">
@@ -118,7 +119,7 @@
 
   </div>
   </section>
-
+<!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
   <div class="contact-container">
     <h2>Contact Us</h2>
@@ -150,6 +151,110 @@
       </div>
     </div>
   </div>
+  </section>
+  <!-- EXPERIENCE SECTION -->
+  <section id="Experience" class="pattern-section">
+
+  <div class="experience-container">
+    <h2>Experience</h2>
+
+    <div class="experience-grid">
+
+      <!-- Indian Navy -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <img src="images/indiannavy.jpeg" alt="Indian Navy Logo" class="exp-logo">
+          <div>
+            <h3>Indian Navy</h3>
+            <p class="role">Manpower & Support Services</p>
+          </div>
+        </div>
+        <p class="desc">
+          Provided manpower and support services to Indian Navy establishments,
+          ensuring disciplined workforce deployment and operational assistance.
+        </p>
+      </div>
+
+      <!-- CBEC - Customs -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <img src="images/cbec.jpeg" alt="CBEC Customs Logo" class="exp-logo">
+          <div>
+            <h3>CBEC – Customs</h3>
+            <p class="role">Administrative Manpower Services</p>
+          </div>
+        </div>
+        <p class="desc">
+          Supplied manpower support services to CBEC (Customs) offices,
+          assisting in administrative and office support functions.
+        </p>
+      </div>
+
+      <!-- CBDT -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <img src="images/cbdt.jpeg" alt="CBDT Logo" class="exp-logo">
+          <div>
+            <h3>CBDT</h3>
+            <p class="role">Departmental Support Services</p>
+          </div>
+        </div>
+        <p class="desc">
+          Delivered manpower services to CBDT departments,
+          supporting administrative operations and record management.
+        </p>
+      </div>
+
+      <!-- Plant Quarantine -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <img src="images/plantquarantine.jpeg" alt="Plant Quarantine Logo" class="exp-logo">
+          <div>
+            <h3>Plant Quarantine</h3>
+            <p class="role">Operational Workforce Support</p>
+          </div>
+        </div>
+        <p class="desc">
+          Provided workforce support to Plant Quarantine departments,
+          assisting in inspection-related and compliance activities.
+        </p>
+      </div>
+
+      <!-- Kendriya Vidyalaya -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <img src="images/kendara vidhyalaiya.jpeg" alt="Kendriya Vidyalaya Logo" class="exp-logo">
+          <div>
+            <h3>Kendriya Vidyalaya</h3>
+            <p class="role">Institutional Manpower Services</p>
+          </div>
+        </div>
+        <p class="desc">
+          Supplied manpower services to Kendriya Vidyalaya institutions,
+          supporting school administration and facility operations.
+        </p>
+      </div>
+
+      <!-- Air Force Station -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <img src="images/airforcestation.jpeg" alt="Air Force Station Logo" class="exp-logo">
+          <div>
+            <h3>Air Force Station</h3>
+            <p class="role">Facility & Support Services</p>
+          </div>
+        </div>
+        <p class="desc">
+          Delivered manpower and facility support services to Air Force Station
+          premises in a high-discipline operational environment.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -197,6 +302,36 @@
 
   </div>
 </section>
+<script>
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120; // navbar height offset
+      const sectionHeight = section.offsetHeight;
+
+      if (
+        pageYOffset >= sectionTop &&
+        pageYOffset < sectionTop + sectionHeight
+      ) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
 
 
 
