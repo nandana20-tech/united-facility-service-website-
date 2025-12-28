@@ -1308,4 +1308,32 @@ nav a:hover::after {
   letter-spacing: 0.5px;
   font-weight: 600;
 }
+/* ===== Mobile Hero Text Fix ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;        /* smaller, readable */
+    line-height: 1.3;
+    max-width: 90%;
+    margin: 0 auto;
+    word-break: normal;    /* IMPORTANT */
+    white-space: normal;   /* IMPORTANT */
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 16px auto 0;
+  }
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    word-break: keep-all;
+  }
+}
 
