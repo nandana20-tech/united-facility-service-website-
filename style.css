@@ -889,3 +889,173 @@ nav a.active::after {
   background: var(--maroon);
   border-radius: 2px;
 }
+/* =========================
+   EXPERIENCE HEADING SPACING FIX
+   ========================= */
+
+#Experience {
+  padding-top: 140px;   /* creates gap from navbar */
+  margin-top: -80px;    /* keeps scroll-spy accurate */
+}
+section {
+  scroll-margin-top: 100px;
+}
+/* =========================
+   EXPERIENCE SECTION SPACING FIX
+   ========================= */
+
+#Experience {
+  padding-top: 140px;     /* gap from navbar (top) */
+  padding-bottom: 140px;  /* gap before next section (bottom) */
+
+  margin-top: -80px;      /* keeps anchor position correct */
+}
+section {
+  scroll-margin-top: 100px;
+}
+
+/* =========================
+   GLOBAL SAFETY FIXES
+   ========================= */
+
+/* Prevent text overflow everywhere */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Smooth professional feel */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   EXPERIENCE SECTION – POLISHED
+   ========================= */
+
+.experience-section {
+  padding: 100px 60px;
+  background: #f7f8fb;
+}
+
+/* Card polish */
+.experience-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+/* Text safety */
+.experience-card h3,
+.experience-card p {
+  max-width: 100%;
+}
+
+/* =========================
+   MOBILE FIXES (VERY IMPORTANT)
+   ========================= */
+
+@media (max-width: 740px) {
+
+  /* EXPERIENCE SECTION */
+  .experience-section {
+    padding: 80px 20px;
+  }
+
+  .experience-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 20px;
+  }
+
+  .exp-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .exp-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .experience-card h3 {
+    font-size: 18px;
+  }
+
+  .role {
+    font-size: 14px;
+  }
+
+  .desc {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  /* ABOUT CARDS */
+  .about-box {
+    padding: 24px 20px;
+  }
+
+  .about-box h3 {
+    font-size: 20px;
+  }
+
+  .about-box p {
+    font-size: 14.5px;
+  }
+
+  /* SERVICES CARDS */
+  .service-card {
+    padding: 24px 20px;
+  }
+
+  .service-card p,
+  .service-card li {
+    font-size: 14.5px;
+  }
+
+  /* CONTACT */
+  .contact-card {
+    padding: 22px 18px;
+  }
+}
+
+/* =========================
+   NAVBAR PROFESSIONAL TOUCH
+   ========================= */
+
+.navbar {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* Active link subtle animation */
+nav a::after {
+  transition: width 0.3s ease;
+}
+/* =========================
+   SCROLL FADE-IN EFFECT
+   ========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Faster on mobile (feels smoother) */
+@media (max-width: 740px) {
+  .reveal {
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+}
