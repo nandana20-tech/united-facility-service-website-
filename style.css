@@ -1059,3 +1059,253 @@ nav a::after {
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
 }
+#expertise {
+  margin-bottom: 120px;    /* space outside the section */
+}
+.experience-intro {
+  max-width: 820px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  line-height: 1.6;
+}
+.btn.profile {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 80px;        /* horizontal only */
+  position: relative;
+}
+
+.hero-content {
+  max-width: 55%;
+  z-index: 2;
+}
+
+.hero-image {
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px; /* if you had rounded image before */
+}
+.hero + section {
+  margin-top: 120px;
+}
+.vmg-section {
+  padding: 80px 20px;
+  background: #f8f9fb;
+  text-align: center;
+}
+
+.vmg-section h2 {
+  color: #7b1e2b;
+  margin-bottom: 40px;
+}
+
+.vmg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.vmg-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.vmg-card h3 {
+  color: #1f3a5f;
+  margin-bottom: 12px;
+}
+
+.vmg-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+/* ===== Vision, Mission & Goals – Full Width ===== */
+
+.vmg-section {
+  width: 100%;
+  padding: 120px 80px;
+  background: #f8f9fb;
+  text-align: center;
+}
+
+.vmg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.vmg-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.vmg-card h3 {
+  color: #1f3a5f;
+  margin-bottom: 14px;
+}
+
+.vmg-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Mobile safety */
+@media (max-width: 900px) {
+  .vmg-section {
+    padding: 80px 20px;
+  }
+
+  .vmg-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   FIX GAP ABOVE SERVICES
+   ========================= */
+
+/* Remove forced margin after hero */
+.hero + section {
+  margin-top: 0 !important;
+}
+
+/* Services should NOT be vertically centered */
+#services {
+  min-height: auto;
+  align-items: flex-start;
+  padding-top: 60px;   /* clean spacing */
+}
+
+/* Ensure no accidental top gap */
+#services .services-container {
+  padding-top: 0;
+}
+/* =========================
+   VISION, MISSION & GOAL
+   ========================= */
+
+.vmg-section {
+  width: 100%;
+  min-height: 100vh;        /* FULL SCREEN */
+  padding: 100px 80px;
+  background: #f8f9fb;
+  text-align: center;
+}
+
+.vmg-section h2 {
+  color: #7b1e2b;
+  font-size: 38px;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.vmg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CARDS */
+.vmg-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.vmg-card h3 {
+  color: #1f3a5f;
+  margin-bottom: 14px;
+  font-size: 22px;
+}
+
+.vmg-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+  .vmg-section {
+    padding: 70px 20px;
+    min-height: auto;
+  }
+
+  .vmg-grid {
+    grid-template-columns: 1fr;
+  }
+}
+nav a {
+  position: relative;
+  padding: 6px 4px;
+  color: #1f3a5f;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+  color: #7b1e2b;
+}
+
+/* Underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #7b1e2b;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+.vmg-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vmg-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+.vmg-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.vmg-section h2 {
+  font-size: 40px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
