@@ -38,7 +38,7 @@
   </nav>
 </header>
 
-<!-- HERO SECTION -->
+
 <!-- HERO SECTION -->
 <section class="hero">
 
@@ -135,37 +135,84 @@
   </section>
 <!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
-  <div class="contact-container">
-    <h2>Contact Us</h2>
+  <div class="contact-wrapper">
 
-    <p class="contact-intro">
-      Reach out to United Facility Service for reliable manpower and facility
-      management solutions.
-    </p>
+    <!-- LEFT : CONTACT DETAILS -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>
+        Reach out to United Facility Service for reliable manpower and facility
+        management solutions.
+      </p>
 
-    <div class="contact-card">
-      <div class="contact-item">
-        <strong>Phone</strong>
-        <span>+91 99620 49999</span>
-      </div>
+      <div class="contact-card">
+        <div class="contact-item">
+          <strong>Phone</strong>
+          <span>+91 99620 49999</span>
+        </div>
 
-      <div class="contact-item">
-        <strong>Email</strong>
-        <span>unitedfacilityservicechennai@gmail.com</span>
-      </div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          <span>unitedfacilityservicechennai@gmail.com</span>
+        </div>
 
-      <div class="contact-item">
-        <strong>Location</strong>
-        <span>Urapakkam, Chennai, Tamil Nadu</span>
-      </div>
+        <div class="contact-item">
+          <strong>Location</strong>
+          <span>Urapakkam, Chennai, Tamil Nadu</span>
+        </div>
 
-      <div class="contact-item">
-        <strong>Service Area</strong>
-        <span>Pan India</span>
+        <div class="contact-item">
+          <strong>Service Area</strong>
+          <span>Pan India</span>
+        </div>
       </div>
     </div>
+
+    <!-- RIGHT : CONTACT FORM -->
+    <div class="contact-form-box">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        class="contact-form"
+      >
+        <!-- Required for Netlify -->
+        <input type="hidden" name="form-name" value="contact" />
+
+        <h3 class="contact-form-title">Contact Form</h3>
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+        />
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
   </div>
-  </section>
+</section>
   <!-- EXPERIENCE SECTION -->
   <section id="expertise" class="pattern-section">
 
