@@ -1817,4 +1817,16 @@ nav a:hover::after {
 .contact-card {
   margin-top: 28px;
 }
+@media (max-width: 768px) {
+  .contact-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contact-card,
+  .contact-form-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 
