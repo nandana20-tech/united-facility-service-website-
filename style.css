@@ -1818,15 +1818,26 @@ nav a:hover::after {
   margin-top: 28px;
 }
 @media (max-width: 768px) {
-  .contact-section {
-    padding-left: 16px;
-    padding-right: 16px;
+
+  /* Fix overall section padding */
+  #contact {
+    padding: 20px 16px !important;
   }
 
-  .contact-card,
-  .contact-form-wrapper {
+  /* Fix inner layout container */
+  #contact .contact-container {
+    padding: 0 !important;
+    margin: 0 auto !important;
     width: 100%;
-    box-sizing: border-box;
+  }
+
+  /* Fix both cards */
+  #contact .contact-card,
+  #contact .contact-form-wrapper {
+    margin: 16px auto !important;
+    padding: 20px !important;
+    width: calc(100% - 32px) !important;
+    box-sizing: border-box !important;
   }
 }
 
